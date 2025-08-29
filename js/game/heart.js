@@ -87,13 +87,13 @@ Heart.prototype.move = function(delta_ms) {
 
 	var d = { x: 0, y: 0 };
 
-	if (key_is_down["left"])
+	if (key_is_down["a"])
 		d.x = - speed * delta_ms;
-	if (key_is_down["right"])
+	if (key_is_down["d"])
 		d.x = + speed * delta_ms;
-	if (key_is_down["up"])
+	if (key_is_down["w"])
 		d.y = - speed * delta_ms;
-	if (key_is_down["down"])
+	if (key_is_down["s"])
 		d.y = + speed * delta_ms;
 
 	var f = vnorm(d) === 0 ? d : scalar_mult(d, speed * delta_ms / vnorm(d));
